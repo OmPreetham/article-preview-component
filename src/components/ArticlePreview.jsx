@@ -1,5 +1,11 @@
+import { useState } from 'react'
+
 const ArticlePreview = () => {
-  /* TODO: Style and Toggle functionality for share on hover/focus */
+  const [selected, setSelected] = useState(false)
+
+  const toggleSelection = () => {
+    setSelected(!selected)
+  }
 
   return (
     <div className="wrapper">
@@ -32,18 +38,30 @@ const ArticlePreview = () => {
                 </div>
               </div>
               <div className="share-wrapper">
-                <button>
+                <button onClick={toggleSelection}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="15"
                     height="13"
                   >
-                    <path
-                      fill="#6E8098"
-                      d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-                    />
+                    <path d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
                   </svg>
                 </button>
+                {selected && (
+                  <div className="share-popup">
+                    <p>Share</p>
+                    <a href="">
+                      <img src="/images/icon-facebook.svg" alt="Facebook" />
+                    </a>
+                    <a href="">
+                      {' '}
+                      <img src="/images/icon-twitter.svg" alt="Twitter" />
+                    </a>
+                    <a href="">
+                      <img src="/images/icon-pinterest.svg" alt="Pinterest" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -52,4 +70,5 @@ const ArticlePreview = () => {
     </div>
   )
 }
+
 export default ArticlePreview
