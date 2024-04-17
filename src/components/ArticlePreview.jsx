@@ -12,7 +12,7 @@ const ArticlePreview = () => {
       <section>
         <div className="layout-grid">
           <div className="image-wrapper">
-            <img src="/images/drawers.jpg" alt="Drawers" />
+            <img src="images/drawers.jpg" alt="Drawers" />
           </div>
           <div className="layout-flex">
             <div className="headline-wrapper">
@@ -28,10 +28,7 @@ const ArticlePreview = () => {
             </div>
             <div className="profile-wrapper">
               <div className="profile-data">
-                <img
-                  src="/images/avatar-michelle.jpg"
-                  alt="Michelle Appleton"
-                />
+                <img src="images/avatar-michelle.jpg" alt="Michelle Appleton" />
                 <div className="profile-info">
                   <p className="profile-name">Michelle Appleton</p>
                   <p className="profile-date">28 Jun 2020</p>
@@ -51,14 +48,14 @@ const ArticlePreview = () => {
                   <div className="share-popup">
                     <p>Share</p>
                     <a href="">
-                      <img src="/images/icon-facebook.svg" alt="Facebook" />
+                      <img src="images/icon-facebook.svg" alt="Facebook" />
                     </a>
                     <a href="">
                       {' '}
-                      <img src="/images/icon-twitter.svg" alt="Twitter" />
+                      <img src="images/icon-twitter.svg" alt="Twitter" />
                     </a>
                     <a href="">
-                      <img src="/images/icon-pinterest.svg" alt="Pinterest" />
+                      <img src="images/icon-pinterest.svg" alt="Pinterest" />
                     </a>
                   </div>
                 )}
